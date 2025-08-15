@@ -58,12 +58,17 @@ Para ejecutar las pruebas de la aplicación, puedes hacerlo directamente desde e
     mvn clean test
     ```
  Después de ejecutar las pruebas, **JaCoCo** generará un informe de cobertura de código. Puedes encontrar este informe en `target/site/jacoco/index.html`.
+<img width="1610" height="287" alt="image" src="https://github.com/user-attachments/assets/8689d820-4f3d-4812-b82d-ccc5fbe03713" />
 
 ---
 
 ## 💡 Probar Endpoints (con cURL y Swagger)
 
-Esta aplicación incluye **Swagger UI** para una fácil interacción con los endpoints. Puedes acceder a ella en `http://localhost:8080/swagger-ui/index.html#/`.
+Esta aplicación incluye **Swagger UI** para una fácil interacción con los endpoints. Puedes acceder a ella en 
+
+```
+http://localhost:8080/swagger-ui/index.html#/
+```
 
 Para probar tu endpoint POST, puedes usar `curl` de la siguiente manera:
 
