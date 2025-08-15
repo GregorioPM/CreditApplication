@@ -69,8 +69,6 @@ Para probar tu endpoint POST, puedes usar `curl` de la siguiente manera:
 
 **Ejemplo de Comando cURL:**
 
-Suponiendo que tienes un endpoint POST en `/api/recurso` que espera un JSON con `nombre` y `descripcion`:
-
 
 cURL para el endpoint get
 ```
