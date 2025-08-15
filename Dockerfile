@@ -1,10 +1,10 @@
-FROM openjdk:21-jdk-slim
-
-EXPOSE 8080
-
+FROM maven:3.9.6-eclipse-temurin-21 AS builder
 WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
-ARG JAR_FILE=target/credits-0.0.1-SNAPSHOT.jar
-COPY ${JAR_FILE} app.jar
-
+FROM openjdk:21-jdk-slim
+WORKDIR /app
+COPY --from=builder /app/target/*.jar app.jar
+EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
